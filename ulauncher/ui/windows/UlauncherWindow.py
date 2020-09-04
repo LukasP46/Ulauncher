@@ -263,7 +263,8 @@ class UlauncherWindow(Gtk.Window, WindowHelper):
         # works only when the following methods are called in that exact order
         self.window.set_sensitive(True)
         self.window.present()
-        self.position_window()
+        #self.position_window()
+        self.window.fullscreen()
         if not is_wayland_compatibility_on():
             self.present_with_time(Keybinder.get_current_event_time())
 

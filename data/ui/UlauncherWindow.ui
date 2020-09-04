@@ -5,11 +5,11 @@
   <requires lib="ulauncher_window" version="1.0"/>
   <!-- interface-local-resource-path ../media -->
   <object class="UlauncherWindow" id="ulauncher_window">
-    <property name="width_request">604</property>
+    <!--<property name="width_request">604</property>-->
     <property name="can_focus">False</property>
     <property name="has_focus">True</property>
     <property name="title">Ulauncher - Application Launcher</property>
-    <property name="resizable">False</property>
+    <property name="resizable">True</property>
     <property name="window_position">center</property>
     <property name="icon_name">ulauncher</property>
     <property name="skip_taskbar_hint">True</property>
@@ -18,14 +18,20 @@
     <property name="decorated">False</property>
     <property name="deletable">False</property>
     <child>
+      <object class="GtkBox" id="wrapper">
+      <property name="visible">True</property>
+      <property name="app_paintable">True</property>
+      <property name="can_focus">False</property>
+      <property name="margin_left">200</property>
+      <property name="margin_right">200</property>
+      <property name="margin_top">200</property>
+      <property name="margin_bottom">200</property>
+      <property name="orientation">vertical</property>
+      <child>
       <object class="GtkBox" id="body">
         <property name="visible">True</property>
         <property name="app_paintable">True</property>
         <property name="can_focus">False</property>
-        <property name="margin_left">20</property>
-        <property name="margin_right">20</property>
-        <property name="margin_top">20</property>
-        <property name="margin_bottom">20</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkBox" id="input-box">
@@ -108,6 +114,8 @@
         <style>
           <class name="app"/>
         </style>
+      </object>
+      </child>
       </object>
     </child>
   </object>
